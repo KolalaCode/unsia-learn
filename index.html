@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unsia Learn</title>
-
+    <!-- Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,6 +17,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="#">
+                    <!-- Text Formating -->
                     <strong>Unsia Learn</strong>
                 </a>
 
@@ -24,9 +26,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarMenu">
+                    <!-- List -->
                     <ul class="navbar-nav ms-auto">
-
                         <li class="nav-item">
+                            <!-- Link -->
                             <a class="nav-link" href="#hero">Home</a>
                         </li>
 
@@ -71,6 +74,8 @@
    <section id="materi" class="py-5">
         <div class="container">
 
+            <!-- Heading -->
+
             <h2>Materi</h2>
 
             <div class="row">
@@ -79,6 +84,7 @@
                     <div class="card h-100" id="what">
                         <div class="card-body">
                             <h5 class="card-title">Apa itu Malware?</h5>
+                            <!-- Paragraph -->
                             <p class="card-text">
                                 Malware (malicious software) adalah program yang sengaja dibuat untuk merusak,
                                 mencuri data, atau mengganggu sistem komputer tanpa izin pemiliknya.
@@ -124,6 +130,7 @@
             <div class="row">
 
                 <div class="col-md-4">
+                    <!-- Image -->
                     <img src="img/malware.png" class="img-fluid rounded" alt="Ilustrasi serangan malware">
                 </div>
 
@@ -146,6 +153,7 @@
             <h2>Video Edukasi</h2>
 
             <div class="ratio ratio-16x9">
+                <!-- Video -->
             <iframe 
                 src="https://www.youtube.com/embed/7GUyo0_u_K8" 
                 title="Setiap Malware/Virus Dijelaskan Dalam 10 Menit" 
@@ -164,8 +172,10 @@
 
             <h2>Audio Edukasi</h2>
 
+            <!-- Audio -->
+
             <audio controls class="w-100">
-                <source src="audio/Setiap MalwareVirus Dijelaskan Dalam 10 Menit.mp3" type="audio/mpeg">
+                <source src="audio/audio.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung pemutar audio.
             </audio>
 
@@ -176,6 +186,8 @@
         <div class="container">
 
             <h2>Jenis Serangan Siber Lainnya</h2>
+
+            <!-- Table -->
 
             <table class="table table-bordered">
                 <thead>
@@ -241,21 +253,18 @@
 
             <h2>Hubungi Kami</h2>
 
-            <form>
+            <!-- Form -->
+
+           <form action="mailto:info@unsia-learn.netlify.app" method="POST" enctype="text/plain">
 
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
-                </div>
-
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                    <input type="text" class="form-control" id="nama" name="Nama" placeholder="Masukkan nama Anda" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="pesan" class="form-label">Pesan</label>
-                    <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan Anda"></textarea>
+                    <textarea class="form-control" id="pesan" name="Pesan" rows="4" placeholder="Tulis pesan Anda" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Kirim</button>
@@ -268,13 +277,16 @@
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
 
-            <p>&copy; 2026 Unsia Learn</p>
+            <p>&copy; <span id="year"></span> PT Mencari Cinta Sejati. All rights reserved.</p>
+
 
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        </script> 
+    <script> document.getElementById("year").textContent = new Date().getFullYear();
+    </script>   
 
 </body>
 </html>
